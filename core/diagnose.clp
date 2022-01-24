@@ -5,7 +5,7 @@
 
 
 =>
-(assert (diagnosis(name Reacted_to_allergen)))
+(assert (diagnosis(name skin_test)))
 
 (printout t "Positive alleregn reaction , avoid contact with specifed allergens in the environment and use if neccessary prescribed medications" crlf)
 )
@@ -17,7 +17,7 @@
 	
 	(skintest_result(result "No reaction"))
 =>
-(assert (diagnosis(name Reacted_to_allergen_false)))
+(assert (diagnosis(name skin_test_False)))
 
 (printout t "No allergens detected the symptoms potrayed are not related to an allergen , It is recommendend to take a blood test for confirmation " crlf)
 )
@@ -32,12 +32,8 @@
 	(observation(name "never tested for allergens"|"currently on medication"|"genetic history of allergies "))
     (Immunoglobulin_E_result(result "True" ))
     
-
-
-
-     
 =>
-(assert (diagnosis(name Immunoglobulin_E)))
+(assert (diagnosis(name Immunoglobulin_E_result)))
 (printout t "If Patient is sensitized and Immunoglobulin levels are high after exposure to alleregn the patient has an allergy to the alleregn , prescribe remedies to symptoms i.e Home/Lifestyle remedies and Alternative Medicines Based 
 On the Allergen
 If patient has normal Immunoglobulin E (IgE) levels the symptoms are not related to any alleregn " crlf)
@@ -49,6 +45,6 @@ If patient has normal Immunoglobulin E (IgE) levels the symptoms are not related
 	
     (Immunoglobulin_E_result(result "False" ))
     =>
-(assert (diagnosis(name Immunoglobulin_E_False)))
-(printout t "No allergen reaction , patient did not show any reaction to the allergens " crlf)
+(assert (diagnosis(name Immunoglobulin_E_result_False)))
+(printout t " No allergen reaction , patient did not show any reaction to the allergens " crlf)
 )
