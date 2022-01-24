@@ -1,17 +1,13 @@
 (deftemplate symptom(slot name))
 (deftemplate observation(slot name))
 
-(deftemplate tonometry_result(slot result))
-(deftemplate slit_lamp_result(slot result))
-(deftemplate retinal_examination_result(slot result))
-(deftemplate ophthalmoscopy_result(slot result))
-(deftemplate isihara_colour_result(slot result))
-(deftemplate goldmann_perimeter_result(slot result))
-(deftemplate visual_field_result(slot result))
-(deftemplate phoropter_result(slot result))
-(deftemplate snell_test_result(slot result))
-(deftemplate autorefractor_result(slot result))
+(deftemplate skintest_result(slot result))
+(deftemplate skintest_result_False(slot result))
 
-(deftemplate patient(slot name)(slot age)(slot sex)(slot occupation))
-(deftemplate medical_history(slot pre_existing))
+(deftemplate Immunoglobulin_E_result(slot result))
+(deftemplate Immunoglobulin_E_result_False(slot result))
+
+
+(deftemplate patient(slot name)(slot age)(slot sex)(slot occupation)(slot hobbies)(slot latex)(slot foodallergens) (slot pet))
+
 (deftemplate diagnosis(slot name))

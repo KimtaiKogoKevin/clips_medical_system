@@ -9,10 +9,6 @@
 (load "core/medical_test.clp")
 )
 
-(defrule load_history "loads medical history"
-=>
-(load "core/history.clp")
-)
 
 (defrule load_observation "loads symptoms"
 =>

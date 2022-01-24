@@ -1,63 +1,62 @@
-(defrule do_funduscopy_test "decides whether to do a Ophthalmoscopy (also called funduscopy) testing"
-(symptom(name "redness"|"pain"|"itching"|"oozing"|"swelling"))
-=>
-(printout t "Carry out a Ophthalmoscopy (also called funduscopy) and record result" crlf)
-(printout t "
-*positive
-*negative" crlf)
-(bind ?ophthalmoscopy_result (readline))
-(assert (ophthalmoscopy_result(result ?ophthalmoscopy_result)))
-)
+(defrule do_skin_test "Perform Skratch Skin testing"
+(symptom(name "An itchy nose" |"A stuffy nose " |"A runny nose"|"itching"|"Nasal Congestion"|"shortness of breath"|"Watery eyes"|"Continious Sneezing"))
+(observation(name "sore sinuses"|"drainange in nose and throat"|"condition of the skin"|"breathing rate"|"previous allergies"))
 
-(defrule do_visual_field_test "decides whether to do a Visual field testing"
-(symptom(name "loss of vision"|"loss of central vision"))
-(patient (age "55"))
 =>
-(printout t "Carry out a Visual field test and record result" crlf)
-(printout t "
-*positive
-*negative" crlf)
-(bind ?visual_field_result (readline))
-(assert (visual_field_result(result ?visual_field_result)))
-)
+(printout t "Carry out an allergy Test (Skin scratch test) by following the steps listed  and record result
+    a. Choose a site on the arm at least 5 cm from any other test site. 
+Carefully scratch the skin approximately 2 mm-4 mm with a 
+sterile needle (27 gauge) without drawing blood. 
 
-(defrule do_goldman_perimeter "decides whether to do a retinal examination test"
-(symptom(name "loss of vision"|"loss of central vision"))
-(patient (age "55"))
-=>
-(printout t "Carry out a goldman perimeter test and record result" crlf)
-(printout t "
-*positive
-*negative" crlf)
-(bind ?goldmann_perimeter_result (readline))
-(assert (goldmann_perimeter_result(result ?goldmann_perimeter_result)))
-)
+b. Using dropper from Histatrol vial (Histamine Phosphate 2.75 
+mg/mL for percutaneous testing), place a small drop of Histatrol 
+on the site of the scratch. 
 
-(defrule do_slit_lampt "decides whether to do a slit lamp test"
-(symptom(name "poor color perception"|"loss of night vision"|"blurred vision"|"halos around bright light"))
-(observation (name "Patient is sensitive to light and glare"))
-=>
-(printout t "Carry out a slit lamp test and record result" crlf)
-(printout t "
-*positive
-*negative" crlf)
-(bind ?slit_lamp_result (readline))
-(assert (slit_lamp_result(result ?slit_lamp_result)))
+
+c. Read the test at 15 minutes ,  a positive scratch test is a wheal 
+with surrounding erythema at least 3 mm larger than the 
+negative control test, read at 15-20 minutes. if a large wheal 
+reaction occurs before that time, the test site should be wiped 
+free of histamine 
+
+" crlf)
+(printout t " -----------------Enter result---------
+*Positive reaction
+*No reaction
+*Type DONE on a new line to proceed" crlf)
+(bind ?skintest_result (readline))
+(assert (skintest_result(result ?skintest_result)))
 )
 
 
 
-(defrule do_tonometry "decides whether to do a tonometry test"
-(symptom (name "tearing"))
-(observation(name "excessive tearing"))
+
+
+
+
+(defrule do_hmglbin_test "decides whether to do a blood  test"
+(symptom(name "sleep disordered breathing"|"Fatigue"|"Coughing"|"Sore and scratchy throat"|"Headaches"))
+(observation(name "never tested for allergens" | "currently on medication"|"genetic history of allergies "))
+
 =>
-(printout t "Carry out a tonometry test and record the time taken to wet" crlf)
+(printout t "Carry out an allergy blood  Test ( Immunoglobulin E (IgE)) and record result" crlf)
 (printout t "
-*normal
-*longer than normal" crlf)
-(bind ?tonometry_result (readline))
-(assert (tonometry_result(result ?tonometry_result)))
+
+1.Obtain a small blood sample from a vein in patiends arm usind a small needle
+ 2.Collect the blood in the test tube /vial 
+ 3. Test the blood sample and observe the reaction to allergens (Pollen , Milk , eggs , peanuts , soy , wheat , Tree Nut ,Shell fish , Fish , Sesame , Pollen , Dust mites , Fungal Spores , Pet danders)
+ 4. Measure the level of  Immunoglobulin E (IgE) Protiens in the blood
+ 5. If the Immunoglobulin levels are higher than normal to a specific allergen patient is sensitized and allergic to the allergen otherwise  not allergic
+
+*Observe the level of Immunoglobulin E (IgE) to specific allergens and determine if patient is sensitized and allergic to allergen or not
+  Type True if high  False if low and DONE on a newline  to continue " crlf)
+(bind ?Immunoglobulin_E_result (readline))
+(assert (Immunoglobulin_E_result(result ?Immunoglobulin_E_result)))
 )
+
+
+
+
 
 
 (defrule prmpt ""

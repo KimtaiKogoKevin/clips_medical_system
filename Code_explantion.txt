@@ -1,0 +1,110 @@
+Steps
+1. Ask the patient about the symptoms
+2. Make observations of patient by both physical examinations and interrogation 
+3. perform  the recommended tests and perform a diagnosis based on the results obtained
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                         1. SYMPTOMS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 	They include:
+		*Continious Sneezing
+*A runny nose
+*A stuffy nose 
+*An itchy nose
+*itching 
+*Sore and scratchy throat
+*Coughing
+*Headaches
+*Nasal Congestion
+*Fatigue
+*sleep disordered breathing
+*shortness of breath
+*Watery eyes"
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		2. Observation fro  physical observations  and oral  interrogation
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+-sore sinuses
+-drainange in nose and throat
+-condition of the skin
+-breathing rate
+-never tested for allergens
+-currently on medication
+-genetic history of allergies 
+-previous allergies
+
+
+If the patient has never tested for allergens before and is currently on medication the system will prompt him to do a specific blood test where it can be determined if the immune system 
+is sensitized to the allergen and if he is allergic ,  for the other three observations the system recommends a skin scratch test
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		3. ACTUAL TESTS
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		1. Skin scratch test - the medic exposes the skin to certain allergens and observes the reactions 
+		2. Total Ige blood test - the medic measures the haemoglobin protein level in the patients blood
+		
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		4. DIagnosis
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		1. Positive reaction to allergens , avoid the allergens that caused the reaction and recommend lifestyle changes and medication 
+		2. Positive allergic reaction shown by increased haemoglobin in blood when exposed to allergens , prescribe lifestyle changes and medication
+		3. No reaction to both tests indicates the obswerevd symptoms may be of another disease , explore further testing
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+						KBS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				1. get patient  info used by medic to introspect on possible causes 
+				Information takenb --> name,age,gender,occupation, hobbies ,possible exposures of late (from patients memory), does patient have pets i.e may cause dust mites 
+				2. get patient medical history
+				3. RULES
+********************************************************************************************************************************************
+				IF SYMPTOM IS  "An itchy nose" |"A stuffy nose " |"A runny nose"|"itching"|"Nasal Congestion"|"shortness of breath"|"Watery eyes"|"Continious Sneezing"
+					THEN OBSERVE AND QUESTION THE PATIENT THE PATIENT 
+					IF PHYSICAL EXAMINATION AND PATIENT IS NOT ON ANY MEDICATION  IS "sore sinuses"|"drainange in nose and throat"|"condition of the skin"|"breathing rate"
+						THEN TEST CARRY OUT A SKIN SCRATCH TEST
+						IF  POSITIVE REACTION IS OBSERVED TO ALLERGENS 
+							THEN CHANCE Positive alleregn reaction , avoid contact with specifed allergens in the environment and use if neccessary prescribed medications 
+							ELSE 
+							No allergens detected the symptoms potrayed are not related to an allergen , It is recommendend to take a blood test for confirmation
+
+
+				IF SYMPTOM IS "sleep disordered breathing"|"Fatigue"|"Coughing"|"Sore and scratchy throat"|"Headaches"
+					
+					THEN OBSERVE AND QUESTION  THE PATIENT 
+					IF OBSERVATION RESULTS ARE "never tested for allergens"|"currently on medication"
+                        THEN TEST IS TOTAL IGE BLOOD TEST
+						IF IMMUNOMOGLOBIN PROTIEN  LEVELS DEMONSTRATE INCREASE AND SENSITIZATION TO REACTION IS OBSERVED 
+							THEN " The patient has an allergy to the alleregn , prescribe remedies to symptoms i.e Home/Lifestyle remedies and Alternative Medicines Based 
+                           On the Allergen
+                                normal Immunoglobulin E (IgE) levels indicate the symptoms are not related to any alleregn "  OTHERWISE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
